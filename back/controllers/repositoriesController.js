@@ -16,14 +16,6 @@ export const saveRepositories = async (req, res) => {
   //get trending repositories from 7 days ago until now
   const repos = await fetch(
     `https://api.github.com/search/repositories?q=created:>${sevenDaysAgo}&sort=stars&order=desc`,
-    {
-      method: "GET",
-      headers: {
-        Accept: "application/vnd.github+json",
-        Authorization: `Bearer ${process.env.TOKEN}`,
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    },
   );
   const data = await repos.json();
 
