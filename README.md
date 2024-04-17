@@ -1,6 +1,7 @@
 # Github_API Project
 
 ## to run the project : 
+- git clone git@github.com:MrBiscuit25/github_api.git
 - cd github_api;  
 - docker compose app;
 
